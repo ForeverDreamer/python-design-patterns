@@ -3,7 +3,9 @@ from ctx_observer import AbsObserver
 
 
 class AbsSubject(ABC):
-    _observers = set()
+
+    def __init__(self):
+        self._observers = set()
     
     def attach(self, observer):
         if not isinstance(observer, AbsObserver):

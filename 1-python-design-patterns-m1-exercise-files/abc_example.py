@@ -8,6 +8,7 @@ class MyABC(ABC):
     def do_something(self, value):
         """Required method"""
 
+    @property
     @abstractmethod
     def some_property(self):
         """Required property"""

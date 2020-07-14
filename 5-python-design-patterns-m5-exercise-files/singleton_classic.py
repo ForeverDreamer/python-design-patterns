@@ -1,5 +1,4 @@
 class Singleton:
-    ans = None
 
     @staticmethod
     def instance():

@@ -2,7 +2,9 @@ import datetime
 
 
 class Logger:
-    log_file = None
+
+    def __init__(self):
+        self._log_file = None
 
     @staticmethod
     def instance():
@@ -11,15 +13,15 @@ class Logger:
         return Logger._instance
 
     def open_log(self, path):
-        self.log_file = open(path, mode='w')
+        self._log_file = open(path, mode='w')
 
     def write_log(self, log_record):
         now = str(datetime.datetime.now())
         record = '%s: %s' % (now, log_record)
-        self.log_file.write(record)
+        self._log_file.write(record)
     
     def close_log(self):
-        self.log_file.close()
+        self._log_file.close()
 
 
 logger = Logger.instance()
