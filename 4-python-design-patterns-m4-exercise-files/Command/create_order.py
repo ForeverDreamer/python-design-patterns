@@ -1,16 +1,16 @@
-from command_abc import AbsCommand
-from order_command_abc import AbsOrderCommand
+from abc_command import AbsCommand
+from abc_order_command import AbsOrderCommand
 
 
-class CreateOrder(AbsCommand, AbsOrderCommand):
-    name = 'CreateOrder'
-    description = '创建订单'
+class CreateOrder(AbsCommand):
+    # name = 'CreateOrder'
+    # description = '创建订单'
 
     # def __init__(self, name='CreateOrder', description='创建订单'):
     #     super(AbsCommand, self).__init__(name, description)
 
-    def __init__(self, *args):
-        pass
+    def __init__(self, name='CreateOrder', description='创建订单'):
+        super().__init__(name, description)
 
     def execute(self):
         print('订单创建成功！')

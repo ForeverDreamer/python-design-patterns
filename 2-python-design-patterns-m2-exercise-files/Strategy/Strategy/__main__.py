@@ -1,27 +1,18 @@
+"""Classification: Behavioral"""
+
 from strategy import *
 
-# Test Federal Express shipping
-
 order = Order()
-strategy = FedExStrategy()
-cost_calulator = ShippingCost(strategy)
-cost = cost_calulator.shipping_cost(order)
-assert cost == 3.0
+# Test Federal Express shipping
+sc = ShippingCost(FedExStrategy())
+assert sc.calculate(order) == 3.0
 
 # Test UPS shipping
-
-order = Order()
-strategy = UPSStrategy()
-cost_calulator = ShippingCost(strategy)
-cost = cost_calulator.shipping_cost(order)
-assert cost == 4.0
+sc = ShippingCost(UPSStrategy())
+assert sc.calculate(order) == 4.0
 
 # Test Postal Service shipping
-
-order = Order()
-strategy = PostalStrategy()
-cost_calulator = ShippingCost(strategy)
-cost = cost_calulator.shipping_cost(order)
-assert cost == 5.0
+sc = ShippingCost(PostalStrategy())
+assert sc.calculate(order) == 5.0
 
 print('Tests passed')

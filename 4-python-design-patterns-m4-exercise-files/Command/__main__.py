@@ -1,3 +1,5 @@
+"""Classification: Behavioral"""
+
 from create_order import CreateOrder
 from update_order import UpdateOrder
 from ship_order import ShipOrder

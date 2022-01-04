@@ -1,3 +1,5 @@
+"""Classification: Creational"""
+
 from logger_meta import Logger
 
 logger = Logger('my.log')

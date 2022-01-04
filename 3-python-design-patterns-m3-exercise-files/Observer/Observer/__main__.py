@@ -1,3 +1,5 @@
+"""Classification: Behavioral"""
+
 from kpis import KPIs
 from currentkpis import CurrentKPIs
 from forecastkpis import ForecastKPIs

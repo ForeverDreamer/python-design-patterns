@@ -11,8 +11,8 @@ class AbsAuto(ABC):
         return self._name
 
     @name.setter
-    def name(self, name):
-        self._name = name
+    def name(self, n):
+        self._name = n
 
     @abstractmethod
     def start(self):

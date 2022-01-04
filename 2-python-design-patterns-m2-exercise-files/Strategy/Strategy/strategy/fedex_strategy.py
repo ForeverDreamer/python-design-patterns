@@ -1,4 +1,4 @@
-from strategy.strategy_abc import AbsStrategy
+from strategy.abc_strategy import AbsStrategy
 
 
 class FedExStrategy(AbsStrategy):

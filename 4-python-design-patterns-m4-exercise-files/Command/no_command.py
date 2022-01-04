@@ -1,13 +1,12 @@
-from command_abc import AbsCommand
+from abc_command import AbsCommand
 
 
 class NoCommand(AbsCommand):
-    def __init__(self, args):
-        self._command = args[0]
-        # self.execute()
+    def __init__(self, name='NoCommand', description='命令不存在'):
+        super().__init__(name, description)
 
     def execute(self):
-        print('No command named {}'.format(self._command))
+        print('No command named {}'.format(self.name))
 
 
 

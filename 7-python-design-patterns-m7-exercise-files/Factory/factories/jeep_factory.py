@@ -8,5 +8,6 @@ class JeepFactory(AbsFactory):
         self._jeep = None
 
     def create_auto(self):
-        self._jeep = JeepSahara('Jeep Sahara')
+        self._jeep = JeepSahara()
+        self._jeep.name = 'Jeep Sahara'
         return self._jeep

@@ -1,3 +1,5 @@
+"""Classification: Creational"""
+
 from factories import loader
 
 for factory_name in 'chevy_factory', 'jeep_factory', 'ford_factory', 'tesla_factory':

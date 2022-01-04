@@ -1,5 +1,5 @@
 from abc import ABC
-from observer.observer_abc import AbsObserver
+from observer.abc_observer import AbsObserver
 
 
 class AbsSubject(ABC):
