@@ -22,8 +22,8 @@ def print_usage(commands):
 def parse_command(commands, args):
     print(type(args))
     print(args)
-    cmd = commands.setdefault(args[0], NoCommand)
-    return cmd(args)
+    cls = commands.setdefault(args[0], NoCommand)
+    return cls(args)
 
 
 comms = get_commands()
