@@ -10,9 +10,6 @@ class AbsBuilder(ABC):
     def get_computer(self):
         return self._computer
 
-    def new_computer(self):
-        self._computer = Computer()
-
     @abstractmethod
     def get_case(self):
         pass
@@ -32,4 +29,12 @@ class AbsBuilder(ABC):
     @abstractmethod
     def install_video_card(self):
         pass
+
+    def build_computer(self):
+        self._computer = Computer()
+        self.get_case()
+        self.build_mainboard()
+        self.install_mainboard()
+        self.install_hard_drive()
+        self.install_video_card()
 

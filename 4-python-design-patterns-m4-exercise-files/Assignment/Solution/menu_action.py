@@ -1,4 +1,4 @@
-from Queue import LifoQueue
+from queue import LifoQueue
 from collections import defaultdict
 
 class Actions(object):
@@ -27,3 +27,5 @@ class MenuAction(object):
     def undo(self):
         if not self.undo_commands.empty():
             self.undo_commands.get().undo()
+        else:
+            print('No more commands to undo.')
